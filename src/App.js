@@ -18,6 +18,7 @@ function App() {
       const data = await response.json()
       setError(false)
       setCep(data)
+      setInput("")
     } catch {
       setError(true)
 
