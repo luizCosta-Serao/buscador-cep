@@ -44,17 +44,18 @@ function App() {
           <FiSearch size={25} color="#FFF"/>
         </button>
       </div>
+      <p></p>
       {error && input.length === 0 ? <p className="error">Preencha o campo</p> : ""}
       {error && input.length > 0 ? <p className="error">Preencha um CEP válido</p> : ""}
         {cep ?
         <main className="main">
-          <h2>CEP: {cep.cep}</h2>
-          <span>{cep.logradouro}</span>
-          <span>Complemento: {cep.complemento}</span>
-          <span>ddd: {cep.ddd}</span>
-          <span>ibge: {cep.ibge}</span>
-          <span>siafi: {cep.siafi}</span>
-          <span>Bairro: {cep.bairro}</span>
+          <h2>CEP: <span style={{fontWeight:"400"}}>{cep.cep}</span></h2>
+          <span style={{fontWeight:"400"}}>{cep.logradouro}</span>
+          <span>Complemento: <span style={{fontWeight:"400"}}>{cep.complemento === "" ? "Nenhum complemento" : cep.complemento}</span></span>
+          <span>ddd: <span style={{fontWeight:"400"}}>{cep.ddd}</span></span>
+          <span>ibge: <span style={{fontWeight:"400"}}>{cep.ibge}</span></span>
+          <span>siafi: <span style={{fontWeight:"400"}}>{cep.siafi}</span></span>
+          <span>Bairro: <span style={{fontWeight:"400"}}>{cep.bairro}</span></span>
           <span>{cep.localidade} - {cep.uf}</span>
         </main> :
         ""
