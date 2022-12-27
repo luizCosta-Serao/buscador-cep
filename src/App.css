@@ -79,6 +79,14 @@
   font-weight: bold;
 }
 
+.error {
+  color: red;
+}
+
+.ok {
+  color: green;
+}
+
 /*ANIMAÇÃO DO TÍTULO PRINCIPAL*/
 @keyframes animaTitulo {
   from {
