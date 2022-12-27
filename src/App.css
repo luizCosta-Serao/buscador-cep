@@ -1,38 +1,91 @@
-.App {
+/*RESETANDO ESTILOS PADRÕES*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*ESTILIZANDO O CONTAINER*/
+.container {
+  height: 100vh;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
+  background-color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*ESTILIZANDO O TITULO PRINCIPAL "Buscador de CEP"*/
+.container > h1 {
+  color: #FFF;
+  font-size: 4rem;
+  animation: animaTitulo 2s ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*ESTILIZAÇÃO DA DIV DE PESQUISA DO CEP*/
+.inputCep {
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*ESTILIZAÇÃO DO INPUT*/
+.inputCep input {
+  border: none;
+  background: #777;
+  color: #FFF;
+  padding-left: .5rem;
+  font-size: 1.125rem;
+  border-radius: 1rem 0 0 1rem;
+}
+
+/*ESTILIZÇÃO DO PLACEHOLDER DO INPUT*/
+.inputCep input::placeholder {
+  color: #FFF;
+}
+
+/*ESTILIZAÇÃO DO INPUT EM ESTADO DE FOCO*/
+.inputCep input:focus {
+  outline: none;
+}
+
+/*ESTILIZAÇÃO DO BUTTON*/
+.buttonSearch {
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  background: #777;
+  padding: .5rem;
+  cursor: pointer;
+}
+
+/*ESTILIZANDO AS INFORMAÇÕES DE ENDEREÇO DO CEP */
+.main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: .5rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #FFF;
 }
 
-.App-link {
-  color: #61dafb;
+.main > h2 {
+  color: #333;
 }
 
-@keyframes App-logo-spin {
+.main > span {
+  color: #333;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+/*ANIMAÇÃO DO TÍTULO PRINCIPAL*/
+@keyframes animaTitulo {
   from {
-    transform: rotate(0deg);
-  }
+    transform: rotateX(90deg);
+  } 
+  
   to {
-    transform: rotate(360deg);
+    transform: rotateX(0deg);
   }
 }
