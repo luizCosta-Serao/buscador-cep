@@ -23,11 +23,15 @@
   color: #FFF;
   font-size: 4rem;
   animation: animaTitulo 2s ;
+  width: 90%;
+  margin: 0 auto;
 }
 
 /*ESTILIZAÇÃO DA DIV DE PESQUISA DO CEP*/
 .inputCep {
   display: flex;
+  width: 90%;
+  justify-content: center;
 }
 
 /*ESTILIZAÇÃO DO INPUT*/
@@ -67,6 +71,8 @@
   border-radius: 1rem;
   padding: 1rem;
   background-color: #FFF;
+  width: 90%;
+  max-width: 450px;
 }
 
 .main > h2 {
@@ -79,10 +85,12 @@
   font-weight: bold;
 }
 
+/*Mensagem de erro*/
 .error {
   color: red;
 }
 
+/*mensagem de tudo ok*/
 .ok {
   color: green;
 }
@@ -95,5 +103,11 @@
   
   to {
     transform: rotateX(0deg);
+  }
+}
+
+@media (max-width:340px) {
+  .container > h1 {
+    font-size: 2.5rem;
   }
 }

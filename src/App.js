@@ -19,6 +19,7 @@ function App() {
       setError(false)
       setCep(data)
       setInput("")
+      console.log(cep)
     } catch {
       setError(true)
 
@@ -50,6 +51,9 @@ function App() {
           <h2>CEP: {cep.cep}</h2>
           <span>{cep.logradouro}</span>
           <span>Complemento: {cep.complemento}</span>
+          <span>ddd: {cep.ddd}</span>
+          <span>ibge: {cep.ibge}</span>
+          <span>siafi: {cep.siafi}</span>
           <span>Bairro: {cep.bairro}</span>
           <span>{cep.localidade} - {cep.uf}</span>
         </main> :
